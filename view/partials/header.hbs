@@ -1,0 +1,28 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="/">E&C.co.in</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        {{#if userCustomId}}
+        <li class="nav-item">
+          <form method='POST' action='/logout?_method=DELETE'>
+            <button type="submit" class="btn btn-primary">Logout</button>
+          </form>
+        </li>
+        {{else}}
+        <li class="nav-item active">
+          <a class="nav-link" href="/login" style="color: green;">Login</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/register" style="color:gold;">Register</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
+</div>
